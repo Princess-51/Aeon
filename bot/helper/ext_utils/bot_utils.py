@@ -234,8 +234,8 @@ def progress_bar(pct):
         pct = float(pct.strip("%"))
     p = min(max(pct, 0), 100)
     c_full = int((p + 5) // 10)
-    p_str = "●" * c_full
-    p_str += "○" * (10 - c_full)
+    p_str = "▰" * c_full
+    p_str += "▱" * (10 - c_full)
     return p_str
 
 
@@ -248,7 +248,7 @@ def source(self):
 
 
 def get_readable_message():
-    msg = "<b>Powered by Aeon</b>\n\n"
+    msg = "<b>Powered by SUBHADRA</b>\n\n"
     button = None
     tasks = len(download_dict)
     current_time = get_readable_time(time() - bot_start_time)
@@ -295,9 +295,9 @@ def get_readable_message():
         buttons.callback(f"{PAGE_NO}/{PAGES}", "status ref")
         buttons.callback("Next", "status nex")
         button = buttons.column(3)
-    msg += f"<b>• Tasks</b>: {tasks}{bmax_task}"
-    msg += f"\n<b>• Bot uptime</b>: {current_time}"
-    msg += f"\n<b>• Free disk space</b>: {get_readable_file_size(disk_usage('/usr/src/app/downloads/').free)}"
+    msg += f"<b>☞ Tasks</b>: {tasks}{bmax_task}"
+    msg += f"\n<b>☞ Bot uptime</b>: {current_time}"
+    msg += f"\n<b>☞ Free disk space</b>: {get_readable_file_size(disk_usage('/usr/src/app/downloads/').free)}"
     return msg, button
 
 
