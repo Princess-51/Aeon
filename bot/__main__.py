@@ -121,13 +121,13 @@ async def stats(_, message):
         "User task": config_dict.get("USER_MAX_TASKS", "∞"),
     }
     system_info = (
-        f"<code>• Bot uptime :</code> {current_time}\n"
-        f"<code>• Sys uptime :</code> {os_uptime}\n"
-        f"<code>• CPU usage  :</code> {cpu_usage}%\n"
-        f"<code>• RAM usage  :</code> {memory.percent}%\n"
-        f"<code>• Disk usage :</code> {disk}%\n"
-        f"<code>• Free space :</code> {get_readable_file_size(free)}\n"
-        f"<code>• Total space:</code> {get_readable_file_size(total)}\n\n"
+        f"<code>☞ Bot uptime :</code> {current_time}\n"
+        f"<code>☞ Sys uptime :</code> {os_uptime}\n"
+        f"<code>☞ CPU usage  :</code> {cpu_usage}%\n"
+        f"<code>☞ RAM usage  :</code> {memory.percent}%\n"
+        f"<code>☞ Disk usage :</code> {disk}%\n"
+        f"<code>☞ Free space :</code> {get_readable_file_size(free)}\n"
+        f"<code>☞ Total space:</code> {get_readable_file_size(total)}\n\n"
     )
 
     limitations = "<b>LIMITATIONS</b>\n\n"
@@ -139,7 +139,7 @@ async def stats(_, message):
             value = f"{v}GB/Link"
         else:
             value = f"{v} Tasks/user"
-        limitations += f"<code>• {k:<11}:</code> {value}\n"
+        limitations += f"<code>☞ {k:<11}:</code> {value}\n"
 
     stats = system_info + limitations
     reply_message = await send_message(message, stats, photo="Random")
