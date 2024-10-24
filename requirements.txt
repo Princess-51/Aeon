@@ -10,6 +10,7 @@ bencoding
 cinemagoer
 cloudscraper
 dnspython
+electrogram
 feedparser
 flask
 gevent
@@ -28,7 +29,6 @@ pillow
 psutil
 pybase64
 pycountry
-pyrofork
 python-dotenv
 pyshorteners
 python-magic
